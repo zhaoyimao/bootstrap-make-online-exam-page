@@ -3,31 +3,97 @@
         <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
         <script src="./jquery-3.2.1.js"></script>        
         <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="page.css">
+        <script src="getScore.js"></script>
+        <script src="getUserAnswer.js"></script>
+        <script src="getScoreForHtml.js"></script>
+        <script src="jquery-3.2.1.js"></script>
     </head>
     <body>
-        <!--write your code here-->
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Launch demo modal
-</button>
+      <div id="page">
+      <div class="row">
+        <div class="col-md-12"><h1>统一建模语言</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 title1">考试科目：</div>
+        <div class="col-md-2">统一建模语言</div>
+        <div class="col-md-2 title1">时间:</div>
+        <div class="col-md-2">100分钟</div>
+       <div class="col-md-2 title1">得分:</div>
+       <div class="col-md-2"><input type="text" id="score" class="text"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 title1">班级:</div>
+        <div class="col-md-2"><input type="text" id="class" class="text"></div>
+        <div class="col-md-2 title1">学号:</div>
+        <div class="col-md-2"><input type="text" id="stuid" class="text"></div>
+      <div class="col-md-2 title1">姓名:</div>
+      <div class="col-md-2"><input type="text" id="name" class="text" ></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><h2>一、填空题（每空5分,共20分）</h2></div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">1、UML的中文全称是：</div><div class="col-md-9"><input type="text" id="blanks_1"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">2、对象最突出的特征是:</div>
+        <div class="col-md-3"><input type="text" class="text2"  id="blanks_2"></div>
+        <div class="col-md-3"><input type="text" class="text2"  id="blanks_3"></div>
+        <div class="col-md-3"><input type="text" class="text2" id="blanks_4"></div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><h2>二、选择题（每空10分,共20分）</h2></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">1、UML与软件工程的关系是:</div>
+          </div>
+          <input type="radio" value="A" name="select_1">(A)UML就是软件工程<br>
+          <input type="radio" value="B" name="select_1">(B)UML参与到软件工程中软件开发的几个阶段<br>
+          <input type="radio" value="C" name="select_1">(C)UML与软件工程无关<br>
+          <input type="radio" value="D" name="select_1">(D)UML是软件工程的一部分
+          <div class="row">
+            <div class="col-md-12">2、java语言支持:</div>
+          </div>
+          <input type="radio" value="A" name="select_2">(A)单继承<br>
+          <input type="radio" value="B" name="select_2">(B)多继承<br>
+          <input type="radio" value="C" name="select_2">(C)单继承和多继承都支持<br>
+          <input type="radio" value="D" name="select_2">(D)单继承和多继承都不支持
+          <div class="row">
+            <div class="col-md-12"><h2>三、多选题（每空10分,共20分）</h2></div>
+          </div>   
+          <div class="row">
+            <div class="col-md-12">1.用户的粒度分为以下哪三种:</div></div>
+            <input type="checkbox" value="A" name="multiselect_1">(A)概述级<br>
+            <input type="checkbox" value="B" name="multiselect_1">(B)需求级<br>
+            <input type="checkbox" value="C" name="multiselect_1">(C)用户目标级<br>
+            <input type="checkbox" value="D" name="multiselect_1">(D)子功能级
+            <div class="row">
+              <div class="col-md-12">2.类图由以下那三部分组成:?</div></div>
+              <input type="checkbox" value="A" name="multiselect_2">(A)名称(Name)<br>
+              <input type="checkbox" value="B" name="multiselect_2">(B)属性(Attribute)<br>
+              <input type="checkbox" value="C" name="multiselect_2">(C)操作(Operation)<br>
+              <input type="checkbox" value="D" name="multiselect_2">(D)方法(Function)
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        You're ready to go!
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+              <div class="row">
+                <div class="col-md-12"><h2>四、判断题（每空10分,共20分）</h2></div>
+              </div> 
+              <ol>
+                <li>用例图只是用于和客户交流和沟通的，用于确定需求。 <input type="radio" value="correct" name="judge_1">√<input type="radio" value="error" name="judge_1">×</li>
+                <li>在状态图中，终止状态在一个状态图中允许有任意多个。<input type="radio" value="correct" name="judge_2">√<input type="radio" value="error" name="judge_2">×</li>
+             </ol> 
+             <div class="row">
+                <div class="col-md-12"><h2>五、简答题（每空20分,共20分）</h2></div></div>
+                <div class="row">
+                    <div class="col-md-12">1、简述什么是模型以及模型的表现形式？</div></div>
+                    <div class="row">
+                        <div class="col-md-12"> <textarea id="short_answer_text"></textarea></div></div>
+                     
+              <div id="count">
+                  <button class="button" id="count_button" onclick="getScoreForHtml()">计算分数</button>
+               </div>    
     </div>
-  </div>
-</div>
+    </div>
+      
     </body>
 </html>
